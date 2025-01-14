@@ -97,6 +97,7 @@ vim.keymap.set('n', '<leader>wv', '<C-w><C-v>', { desc = 'Split window verticall
 vim.keymap.set('n', '<leader>ws', '<C-w><C-s>', { desc = 'Split window horizontally' })
 vim.keymap.set('n', '<leader>wc', ':tabnew<CR>', { desc = 'Create new tab' })
 vim.keymap.set('n', '<leader>wq', '<C-w><C-q>', { desc = 'Close window' })
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
