@@ -92,12 +92,13 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<C-n>', 'gt', { desc = 'Move focus to the next tab' })
 vim.keymap.set('n', '<C-p>', 'gT', { desc = 'Move focus to the previous tab' })
 
--- Create new tab with CTRL+w CTRL+c
 vim.keymap.set('n', '<leader>wv', '<C-w><C-v>', { desc = 'Split window vertically' })
 vim.keymap.set('n', '<leader>ws', '<C-w><C-s>', { desc = 'Split window horizontally' })
 vim.keymap.set('n', '<leader>wc', ':tabnew<CR>', { desc = 'Create new tab' })
 vim.keymap.set('n', '<leader>wq', '<C-w><C-q>', { desc = 'Close window' })
+vim.keymap.set('n', '<leader>ww', ':w<CR>', { desc = 'Save buffer' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic' })
+vim.keymap.set('n', '<leader>k', vim.lsp.buf.hover, { desc = 'Hover Documentation' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -212,6 +213,8 @@ require('lazy').setup({
     },
   },
 })
+
+vim.env.PYENV_VERSION = vim.fn.system('pyenv version'):match '(%S+)%s+%(.-%)'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
