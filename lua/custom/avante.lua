@@ -55,6 +55,9 @@ return {
         },
       },
       hints = { enabled = true },
+      windows = {
+        width = 50,
+      },
     },
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
     build = 'make',
