@@ -99,6 +99,7 @@ vim.keymap.set('n', '<leader>wq', '<C-w><C-q>', { desc = 'Close window' })
 vim.keymap.set('n', '<leader>ww', ':w<CR>', { desc = 'Save buffer' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic' })
 vim.keymap.set('n', '<leader>k', vim.lsp.buf.hover, { desc = 'Hover Documentation' })
+vim.keymap.set('n', '<leader>w=', '<C-w>=', { desc = 'Make windows equal size' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
