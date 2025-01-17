@@ -173,7 +173,7 @@ require('lazy').setup({
   --
   require 'kickstart.plugins.indent_line',
   require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.lint',
 
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
