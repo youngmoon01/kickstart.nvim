@@ -11,7 +11,7 @@ vim.g.have_nerd_font = false
 -- See `:help vim.opt`
 
 vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 vim.opt.wrapscan = false
 
 -- Enable mouse mode, can be useful for resizing splits for example!
@@ -45,7 +45,7 @@ vim.opt.signcolumn = 'yes'
 vim.opt.updatetime = 250
 
 -- Decrease mapped sequence wait time
-vim.opt.timeoutlen = 300
+vim.opt.timeoutlen = 50
 
 -- Configure how new splits should be opened
 vim.opt.splitright = true
