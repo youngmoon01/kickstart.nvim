@@ -155,7 +155,9 @@ return {
       local servers = {
         clangd = {},
         -- gopls = {},
-        pyright = {},
+        pyright = {
+          cmd = { 'uv', 'run', 'pyright-langserver', '--stdio' },
+        },
         ruff = {},
         rust_analyzer = {
           settings = {
