@@ -151,7 +151,6 @@ require('lazy').setup({
   require 'custom/mini',
   require 'custom/cmp',
   require 'custom/treesitter',
-  require 'custom/avante',
   require 'custom/lazygit',
   require 'custom/flash',
 
