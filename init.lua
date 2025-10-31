@@ -153,6 +153,7 @@ require('lazy').setup({
   require 'custom/treesitter',
   require 'custom/lazygit',
   require 'custom/flash',
+  require 'custom/snacks',
 
   -- Highlight todo, notes, etc in comments
   {
