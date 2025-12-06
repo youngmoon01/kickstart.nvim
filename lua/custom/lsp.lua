@@ -158,7 +158,9 @@ return {
         pyright = {
           cmd = { 'uv', 'run', 'pyright-langserver', '--stdio' },
         },
-        ruff = {},
+        ruff = {
+          cmd = { 'uv', 'run', 'ruff', 'server' },
+        },
         rust_analyzer = {
           settings = {
             ['rust-analyzer'] = {
