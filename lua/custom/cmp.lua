@@ -59,9 +59,17 @@ return {
           -- Select the [p]revious item
           ['<C-p>'] = cmp.mapping.select_prev_item(),
 
+          -- Jump 3 items in completion menu
+          ['<C-u>'] = cmp.mapping(function()
+            for _ = 1, 3 do cmp.select_prev_item() end
+          end, { 'i', 's' }),
+          ['<C-d>'] = cmp.mapping(function()
+            for _ = 1, 3 do cmp.select_next_item() end
+          end, { 'i', 's' }),
+
           -- Scroll the documentation window [b]ack / [f]orward
-          ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-          ['<C-d>'] = cmp.mapping.scroll_docs(4),
+          ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+          ['<C-f>'] = cmp.mapping.scroll_docs(4),
 
           -- Accept ([y]es) the completion.
           --  This will auto-import if your LSP supports it.
