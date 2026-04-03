@@ -212,7 +212,11 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
       })
-      require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+      require('mason-tool-installer').setup {
+        ensure_installed = ensure_installed,
+        auto_update = vim.env.DEVCONTAINER == nil,
+        run_on_start = vim.env.DEVCONTAINER == nil,
+      }
 
       require('mason-lspconfig').setup {
         handlers = {
