@@ -214,8 +214,8 @@ return {
       })
       require('mason-tool-installer').setup {
         ensure_installed = ensure_installed,
-        auto_update = vim.env.DEVCONTAINER == nil,
-        run_on_start = vim.env.DEVCONTAINER == nil,
+        auto_update = vim.env.SANDBOX_MODE == nil,
+        run_on_start = vim.env.SANDBOX_MODE == nil,
       }
 
       require('mason-lspconfig').setup {
